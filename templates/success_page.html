@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Successfully login</title>
+    <link rel="stylesheet" type="text/css" href="static/success.css">
+</head>
+<body>
+<div class="success-message">
+    <h1>You are successfully logged in!</h1>
+</div>
+<table class="modern-table">
+    <thead>
+    <tr>
+        {% for i in data_keys %}
+            <th>{{ i }}</th>
+        {% endfor %}
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        {% for i in data[0:-1] %}
+        <td>{{ i }}</td>
+        {% endfor %}
+        {% if data[-1] == 'No photo' %}
+            <td>{{ data[-1] }}"</td>
+        {% else %}
+            <td><img src="{{ data[-1] }}" width="200" height="200"/></td>
+        {% endif %}
+    </tr>
+    </tbody>
+</table>
+</body>
+</html>

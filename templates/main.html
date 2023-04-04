@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>My Website</title>
+    <link rel="stylesheet" type="text/css" href="static/main_style.css">
+  </head>
+  <body>
+    <div class="button-container">
+      <button class="registration-button" onclick="redirectTo('https://t.me/reg1strat1on_bot')">Registration</button>
+      <form action="{{ url_for('redirect_to_login_page') }}">
+          <button class="login-button">Login</button>
+      </form>
+    </div>
+  <script>
+      function redirectTo(url) {
+        window.location.href = url;
+      }
+    </script>
+  </body>
+</html>
